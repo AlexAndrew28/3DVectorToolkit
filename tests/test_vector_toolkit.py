@@ -70,7 +70,7 @@ def test_multiply():
     assert multiply_c_d.get_k() == 54
     
 def test_divide():
-    """Tests the element-wise multiplication of two vectors
+    """Tests the element-wise division of two vectors
     """
     
     a = vector.Vector3D(1, 8, 4)
@@ -90,3 +90,22 @@ def test_divide():
     assert divide_c_d.get_i() == -42
     assert divide_c_d.get_j() == -0.015625
     assert divide_c_d.get_k() == 54
+    
+    
+def test_dot_product():
+    """Tests the dot product function that calculates the dot product of two vectors
+    """
+    
+    a = vector.Vector3D(1, 8, 4)
+    b = vector.Vector3D(5, 2, 16)
+    
+    a_dot_b = vectortools.VectorTools.dot_product(a, b)
+    
+    assert a_dot_b == 85
+    
+    c = vector.Vector3D(-432, 56, -642)
+    d = vector.Vector3D(425, 2, -45)
+    
+    c_dot_d = vectortools.VectorTools.dot_product(c, d)
+    
+    assert c_dot_d == -154598
