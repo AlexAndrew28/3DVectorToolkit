@@ -1,4 +1,4 @@
-from typing import Self
+from typing_extensions import Self
 
 class Vector3D:
     def __init__(self, i: float, j: float ,k: float):
