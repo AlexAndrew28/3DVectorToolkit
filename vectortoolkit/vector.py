@@ -37,16 +37,29 @@ class Vector3D:
         """
         return self.k
         
-    def get_magnitude() -> float:
-        pass
+    def get_magnitude(self) -> float:
+        """Gets the magnitude of the vector
+
+        Returns:
+            float: The magnitude of the vector
+        """
+        # Uses pythagoras to calculate the magnitude
+        return (self.i**2 + self.j**2 + self.k**2)**0.5
     
-    def get_direction() -> float:
-        pass
+    def get_unit_vector(self) -> Self:
+        """ Returns the unit vector of the vector
+
+        Returns:
+            Self: A vector with the same direction but a magnitude of 1
+        """
+        
+        magnitude = self.get_magnitude()
+        
+        i = self.i / magnitude
+        j = self.j / magnitude
+        k = self.k / magnitude
+        
+        return Vector3D(i, j, k)
     
-    def get_unit_vector() -> Self:
-        pass
-    
-    def get_normal() -> Self:
-        pass
 
     
