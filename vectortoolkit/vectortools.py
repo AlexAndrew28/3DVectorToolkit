@@ -79,3 +79,22 @@ class VectorTools:
         k_part = vec_a.get_k() * vec_b.get_k()
         return i_part + j_part + k_part
     
+    def calculate_distance(point_a: [float, float, float], point_b: [float, float, float]) -> float:
+        """Calculates the distance between two points in 3D space
+
+        Args:
+            point_a (float, float, float]): A point in 3D space described as a list of distances [x, y, z]
+            point_b (float, float, float]): A point in 3D space described as a list of distances [x, y, z]
+
+        Returns:
+            float: The distance between the given two coordinates
+        """
+        # calculates the distance in each dimensions between the two points and squares it
+        dimenson_distance_squared = list(map(lambda x,y: (x-y)**2, point_a, point_b))
+        
+        # uses pythagoras to get the distance between two points
+        distance = (sum(dimenson_distance_squared))**0.5
+        
+        return distance
+        
+        

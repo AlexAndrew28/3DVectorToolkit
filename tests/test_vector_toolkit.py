@@ -109,3 +109,17 @@ def test_dot_product():
     vec_c_dot_d = vectortools.VectorTools.dot_product(vec_c, vec_d)
     
     assert vec_c_dot_d == -154598
+    
+    
+def test_distance():
+    """Tests that the calculate distance function correctly calculates the distance between two points
+    """
+    
+    assert vectortools.VectorTools.calculate_distance([0, 0, 0], [0, 10, 0]) == 10
+    assert round(vectortools.VectorTools.calculate_distance([-4, 7, 124], [531, -42, 0]), 5) == 551.36376
+    assert round(vectortools.VectorTools.calculate_distance([-0.696, 0.001, 0.643], [17, -2, 3]), 5) == 17.96407
+    assert round(vectortools.VectorTools.calculate_distance([43, -5, 0], [15, 8, 0]), 5) == 30.87070
+    
+    assert vectortools.VectorTools.calculate_distance([0, 0, 0], [0, 0, 0]) == 0
+    assert vectortools.VectorTools.calculate_distance([0, 1043, -2], [0, 1043, -2]) == 0
+    assert vectortools.VectorTools.calculate_distance([421.2, 0, 4], [421.2, 0, 4]) == 0
