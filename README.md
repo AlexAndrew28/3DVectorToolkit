@@ -99,6 +99,7 @@ vectortoolkit <command> [arguments]
 ```
     
 Commands:
+
     -d          Calculate dot product of two vectors
 
     -c          Calculate cross product of two vectors
