@@ -3,12 +3,14 @@ from vectortoolkit import vector, vectortools
 """
 Task 1 - ensure that the cross product of two vectors is perpendicular to both vectors
 """
-
+print("TASK 1")
 vec_a = vector.Vector3D(17, 9, -7)
 vec_b = vector.Vector3D(18, 24, -24)
 
+# cross product
 vec_a_cross_b = vectortools.VectorTools.cross_product(vec_a, vec_b)
 
+# calculate the angles between A cross B and A and B
 angle_cross_a = vectortools.VectorTools.calculate_angle(vec_a_cross_b, vec_a)
 angle_cross_b = vectortools.VectorTools.calculate_angle(vec_a_cross_b, vec_b)
 
@@ -23,7 +25,7 @@ its heading to reach point (15, 9, -6). What is the angle of the change in headi
 away is the point?
 
 """
-
+print("TASK 2")
 current_vec_travel = vector.Vector3D(4, 7, 9)
 
 current_location = (0, 0, 0)
@@ -47,6 +49,8 @@ Task 3 - Given two input vectors print out the result of the projection of the f
 the second vector
 
 """
+print("TASK 3")
+print("Input two vectors to get the result of projecting the first vector onto the second")
 print("Input vector A that will be projected onto vector B")
 vec_a_input = input("Please enter a vector in the form [x, y, z]: ")
 
