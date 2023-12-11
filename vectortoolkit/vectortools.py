@@ -137,4 +137,23 @@ class VectorTools:
         
         return angle
         
+    def calulate_vector_projection(vec_a: Vector3D, vec_b: Vector3D) -> float:
+        """Calculates the projection of vector A onto vector B
+
+        Args:
+            vec_a (Vector3D): 3D vector A
+            vec_b (Vector3D): 3D vector B
+
+        Returns:
+            float: The result of the projection of vector A on vector B
+        """
         
+        # formula for projection of vector A on vector B: (A.B)/(|B|)
+        
+        vec_a_dot_b = VectorTools.dot_product(vec_a, vec_b)
+        
+        magnitude_vec_b = vec_b.get_magnitude()
+        
+        projection_a_on_b = vec_a_dot_b / magnitude_vec_b
+        
+        return projection_a_on_b

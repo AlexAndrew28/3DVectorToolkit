@@ -165,3 +165,22 @@ def test_vector_angle():
     angle_c_d = vectortools.VectorTools.calculate_angle(vec_c, vec_d)
     
     assert round(angle_c_d, 5) == 1.49879
+    
+    
+def test_vector_projection():
+    """Tests the function that calculates the projection of vector A onto vector B
+    """
+    
+    vec_a = vector.Vector3D(4, 2, 1)
+    vec_b = vector.Vector3D(5, -3, 3)
+    
+    projection_vec_a_on_b = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
+    
+    assert round(projection_vec_a_on_b, 5) == 2.59248
+    
+    vec_c = vector.Vector3D(2, -1, 5)
+    vec_d = vector.Vector3D(4, -1, 1)
+    
+    projection_vec_c_on_d = vectortools.VectorTools.calulate_vector_projection(vec_c, vec_d)
+    
+    assert round(projection_vec_c_on_d, 5) == 3.29983
