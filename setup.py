@@ -11,10 +11,9 @@ setup(
     name="vectortoolkit",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=find_packages(where="vectortoolkit"),
-    package_dir={"": "vectortoolkit"},
+    packages=find_packages(),
     version="0.1.0",
     description="3D vector toolkit for Lambda Automata",
     author="Alex A",
-    install_requires=[]
+    install_requires=["typing-extensions"]
 )
