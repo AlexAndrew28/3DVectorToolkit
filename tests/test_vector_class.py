@@ -1,3 +1,4 @@
+import random
 from vectortoolkit import vector
 
 
@@ -40,4 +41,23 @@ def test_vector_unit():
     assert round(vec_a_unit.get_i(), 5) == 0.76626
     assert round(vec_a_unit.get_j(), 5) == 0.5747
     assert round(vec_a_unit.get_k(), 5) == 0.28735
+    
+def test_vector_scale():
+    """Tests the function that scales a vector by a scalar amount
+    """
+    
+    for i in range(10):
+        i = random.randint(0,100)
+        j = random.randint(0,100)
+        k = random.randint(0,100)
+        
+        scale = 7
+        
+        vec_a = vector.Vector3D(i, j, k)
+        
+        vec_a.scale(scale)
+        
+        assert vec_a.get_i() == i*7
+        assert vec_a.get_j() == j*7
+        assert vec_a.get_k() == k*7
     
