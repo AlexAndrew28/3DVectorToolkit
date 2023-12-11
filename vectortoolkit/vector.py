@@ -46,6 +46,16 @@ class Vector3D:
         # Uses pythagoras to calculate the magnitude
         return (self.i**2 + self.j**2 + self.k**2)**0.5
     
+    def scale(self, factor: float) -> None:
+        """Scales the vector by a scalar amount
+
+        Args:
+            factor (float): The amout to scale the vector by
+        """
+        self.i *= factor
+        self.j *= factor
+        self.k *= factor
+    
     def get_unit_vector(self) -> Self:
         """ Returns the unit vector of the vector
 
