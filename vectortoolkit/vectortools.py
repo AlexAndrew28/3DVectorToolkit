@@ -1,4 +1,5 @@
 from vectortoolkit.vector import Vector3D
+import math
 
 class VectorTools:
     def __init__(self) -> None:
@@ -114,5 +115,26 @@ class VectorTools:
         distance = (sum(dimenson_distance_squared))**0.5
         
         return distance
+    
+    def calculate_angle(vec_a: Vector3D, vec_b: Vector3D) -> float:
+        """Calculates the angle (in radians) between any two given vectors 
+
+        Args:
+            vec_a (Vector3D): A 3D vector
+            vec_b (Vector3D): A 3D vector
+
+        Returns:
+            float: The angle in radians between the two vectors
+        """
+        
+        # formula for the angle is: cos(theta) = (A.B)/(|A|*|B|)
+        
+        vec_a_dot_b = VectorTools.dot_product(vec_a, vec_b)
+        
+        magnitudes_multiplied = vec_a.get_magnitude() * vec_b.get_magnitude()
+        
+        angle = math.acos(vec_a_dot_b/magnitudes_multiplied)
+        
+        return angle
         
         

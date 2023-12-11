@@ -146,3 +146,22 @@ def test_cross_product():
     assert vec_c_cross_d.get_i() == 2580
     assert vec_c_cross_d.get_j() == -2752
     assert vec_c_cross_d.get_k() == 473
+    
+    
+def test_vector_angle():
+    """Tests the function that calculates the angle between two vectors
+    """
+    
+    vec_a = vector.Vector3D(4, 6, -2)
+    vec_b = vector.Vector3D(17, -5, 6)
+    
+    angle_a_b = vectortools.VectorTools.calculate_angle(vec_a, vec_b)
+    
+    assert round(angle_a_b, 5) == 1.38400
+    
+    vec_c = vector.Vector3D(14, 15, 1)
+    vec_d = vector.Vector3D(-2, 3, 35)
+    
+    angle_c_d = vectortools.VectorTools.calculate_angle(vec_c, vec_d)
+    
+    assert round(angle_c_d, 5) == 1.49879
