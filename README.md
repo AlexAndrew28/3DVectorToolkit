@@ -4,7 +4,11 @@
 3D vector toolkit developed as a technical challenge for Lambda Automata.
 
 ### Installation:
-1. Download the wheel file: 
+1. Download the wheel file found at:
+```
+dist/vectortoolkit-0.1.0-py3-none-any.whl
+```
+
 2. Use pip to install the library and its requirements:
 ```
 pip install wheel.whl
