@@ -13,6 +13,9 @@ class Vector3D:
         self.j = j
         self.k = k
         
+    def __str__(self):
+        return "(" + str(self.i) + ", " + str(self.j) + ", " + str(self.k) + ")"
+        
     def get_i(self) -> float:
         """Gets the i component of the vector
 
