@@ -75,6 +75,11 @@ vec_b = vector.Vector3D(x, y, z)
 angle = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
 ```
 
+To see more example code please see the following file:
+```
+example_application_of_library.py
+```
+
 #### Command line:
 
 Usage:
