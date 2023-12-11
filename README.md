@@ -80,6 +80,17 @@ To see more example code please see the following file:
 example_application_of_library.py
 ```
 
+You can also add, subtract, multiply and divide vectors element-wise:
+```python
+vec_a = vector.Vector3D(x, y, z)
+vec_b = vector.Vector3D(x, y, z)
+
+vec_c = vectortools.VectorTools.add_vectors(vec_a, vec_b)
+vec_d = vectortools.VectorTools.subtract_vectors(vec_a, vec_b)
+vec_e = vectortools.VectorTools.multiply_vectors(vec_a, vec_b)
+vec_f = vectortools.VectorTools.divide_vectors(vec_a, vec_b)
+```
+
 #### Command line:
 
 Usage:

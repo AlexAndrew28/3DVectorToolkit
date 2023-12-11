@@ -22,6 +22,8 @@ Find the unit vector
 vectormath:	    3.884 seconds
 vectortools:	0.05 seconds
 
+Each test was run 100000 times
+
     
 """
 

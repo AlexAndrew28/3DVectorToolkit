@@ -17,7 +17,7 @@ By Alex Andrew
 ==============
 Installation:
 ==============
-1. Download the wheel file found at: 
+1. Download the wheel file from the latest release or from the code at the following location 
 ::
 
    dist/vectortoolkit-1.0.0-py3-none-any.whl
@@ -93,6 +93,17 @@ To calculate the projection of one vector onto another: ::
    vec_b = vector.Vector3D(x, y, z)
 
    angle = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
+
+You can also add, subtract, multiply and divide vectors element-wise: ::
+
+   vec_a = vector.Vector3D(x, y, z)
+   vec_b = vector.Vector3D(x, y, z)
+
+   vec_c = vectortools.VectorTools.add_vectors(vec_a, vec_b)
+   vec_d = vectortools.VectorTools.subtract_vectors(vec_a, vec_b)
+   vec_e = vectortools.VectorTools.multiply_vectors(vec_a, vec_b)
+   vec_f = vectortools.VectorTools.divide_vectors(vec_a, vec_b)
+
 
 --------------
 Command line:
