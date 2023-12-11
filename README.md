@@ -127,7 +127,7 @@ The second command will calculate the angle between the two vectors in radians.
 
 #### Benchmarking
 
-To ensure the effciency of my library I compared it to a published 3D vector python library: vectormath. The code used for this test can be found in: 
+To ensure the effciency of my library I compared it to a published 3D vector python library: [vectormath](https://pypi.org/project/vectormath/). The code used for this test can be found in: 
 ```
 benchmark.py
 ```
