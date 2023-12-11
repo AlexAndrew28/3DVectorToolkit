@@ -6,7 +6,7 @@
 ### Installation:
 1. Download the wheel file found at:
 ```
-dist/vectortoolkit-0.1.0-py3-none-any.whl
+dist/vectortoolkit-1.0.0-py3-none-any.whl
 ```
 
 2. Use pip to install the library and its requirements:

@@ -2,3 +2,4 @@ venv/
 __pycache__/
 vectortoolkit.egg-info
 build/
+!docs/build/
