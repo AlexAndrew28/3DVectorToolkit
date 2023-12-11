@@ -40,3 +40,25 @@ distance_to_point = vectortools.VectorTools.calculate_distance(current_location,
 
 print("Change in heading (radians): ", round(heading_change, 5))
 print("Distance to point of interest: ", round(distance_to_point, 5))
+
+
+"""
+Task 3 - Given two input vectors print out the result of the projection of the first vector onto
+the second vector
+
+"""
+print("Input vector A that will be projected onto vector B")
+vec_a_input = input("Please enter a vector in the form [x, y, z]: ")
+
+print("Input vector B that will have vector A projected onto it")
+vec_b_input = input("Please enter a vector in the form [x, y, z]: ")
+
+vec_a_list = list(map(float, vec_a_input.strip("[]").split(",")))
+vec_b_list = list(map(float, vec_b_input.strip("[]").split(",")))
+
+vec_a = vectortools.Vector3D(vec_a_list[0], vec_a_list[1], vec_a_list[2])
+vec_b = vectortools.Vector3D(vec_b_list[0], vec_b_list[1], vec_b_list[2])
+
+projection = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
+
+print(projection)
