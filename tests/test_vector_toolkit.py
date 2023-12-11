@@ -184,3 +184,24 @@ def test_vector_projection():
     projection_vec_c_on_d = vector_tools.VectorTools.calulate_vector_projection(vec_c, vec_d)
     
     assert round(projection_vec_c_on_d, 5) == 3.29983
+    
+    
+def test_angle_and_cross():
+    """Tests that AxB returns a vector that is perpendicular to both A and B
+    """
+    vec_a = vector.Vector3D(2, -35, 24)
+    vec_b = vector.Vector3D(-53, 32, 0.36)
+    
+    # calculate AxB
+    vec_a_cross_b = vector_tools.VectorTools.cross_product(vec_a, vec_b)
+    
+    # get the angle between AxB and A
+    angle_a = vector_tools.VectorTools.calculate_angle(vec_a_cross_b, vec_a)
+    
+    # get the angle between AxB and B
+    angle_b= vector_tools.VectorTools.calculate_angle(vec_a_cross_b, vec_b)
+    
+    # both angles should be the same -> pi/2 radians
+    assert angle_a == angle_b
+    
+    assert round(angle_a, 5) == 1.57080 and round(angle_b, 5) == 1.57080
