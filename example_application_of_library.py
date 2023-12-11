@@ -18,7 +18,7 @@ if round(angle_cross_a, 5) == 1.57080 and round(angle_cross_b, 5) == 1.57080:
     
     
 """
-Task 2 - A veihcle is traveling along (4, 7, 9) and is at (0, 0, 0). The veihcle wants to change 
+Task 2 - A vehicle is traveling along (4, 7, 9) and is at (0, 0, 0). The vehicle wants to change 
 its heading to reach point (15, 9, -6). What is the angle of the change in heading and how far 
 away is the point?
 
@@ -53,9 +53,11 @@ vec_a_input = input("Please enter a vector in the form [x, y, z]: ")
 print("Input vector B that will have vector A projected onto it")
 vec_b_input = input("Please enter a vector in the form [x, y, z]: ")
 
+# convert the string inputs into lists of floats
 vec_a_list = list(map(float, vec_a_input.strip("[]").split(",")))
 vec_b_list = list(map(float, vec_b_input.strip("[]").split(",")))
 
+# convert the lists of floats into vectors
 vec_a = vectortools.Vector3D(vec_a_list[0], vec_a_list[1], vec_a_list[2])
 vec_b = vectortools.Vector3D(vec_b_list[0], vec_b_list[1], vec_b_list[2])
 
