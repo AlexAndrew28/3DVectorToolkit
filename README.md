@@ -122,32 +122,14 @@ For fairness these tests should be run in a fresh environment with only vectorma
 
 From these tests I gained the following results:
 
-Calculate angle between two vectors	
 
-vectormath:	    5.011 seconds
+| Task                        | vectormath Time (seconds) | vectortools Time (seconds) |
+|-----------------------------|---------------------------|-----------------------------|
+| Calculate angle between two vectors | 5.011                     | 0.408                       |
+| Calculate cross product of two vectors | 8.577                     | 0.267                       |
+| Calculate dot product of two vectors | 2.123                     | 0.166                       |
+| Find the unit vector         | 3.884                     | 0.05                        |
 
-vectortools:	0.408 seconds
-
-
-Calculate cross product of two vectors	
-
-vectormath:	    8.577 seconds
-
-vectortools:	0.267 seconds
-
-
-Calculate dot product of two two vectors
-
-vectormath:	    2.123 seconds
-
-vectortools:	0.166 seconds
-
-
-Find the unit vector	
-
-vectormath:	    3.884 seconds
-
-vectortools:	0.05 seconds
 
 
 Each test was run 100000 times.
