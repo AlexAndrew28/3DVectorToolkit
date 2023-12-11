@@ -116,6 +116,7 @@ Commands:
 
 
 Example usages:
+
 The first command will calculate the dot product of the two vectors.
 
 The second command will calculate the angle between the two vectors in radians.
