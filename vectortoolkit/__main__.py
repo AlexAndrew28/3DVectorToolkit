@@ -1,5 +1,5 @@
 import sys
-from vectortoolkit import vectortools
+from vectortoolkit import vector_tools
 
 def help_function():
     """A helper function that prints out all of the command line functions avaliable to the user.
@@ -23,12 +23,12 @@ def help_function():
 
 # dictionary to convert between arg flag and the functionality of that arg flag
 function_lookup = {
-    "-d": {"func": vectortools.VectorTools.dot_product, "n_args":2},
-    "-c": {"func": vectortools.VectorTools.cross_product, "n_args":2},
-    "-di": {"func": vectortools.VectorTools.calculate_distance, "n_args":2},
-    "-a": {"func": vectortools.VectorTools.calculate_angle, "n_args":2},
-    "-p": {"func": vectortools.VectorTools.calulate_vector_projection, "n_args":2},
-    "-u": {"func": vectortools.Vector3D.get_unit_vector, "n_args":1},
+    "-d": {"func": vector_tools.VectorTools.dot_product, "n_args":2},
+    "-c": {"func": vector_tools.VectorTools.cross_product, "n_args":2},
+    "-di": {"func": vector_tools.VectorTools.calculate_distance, "n_args":2},
+    "-a": {"func": vector_tools.VectorTools.calculate_angle, "n_args":2},
+    "-p": {"func": vector_tools.VectorTools.calulate_vector_projection, "n_args":2},
+    "-u": {"func": vector_tools.Vector3D.get_unit_vector, "n_args":1},
     "-help": {"func": help_function, "n_args":0}
 }
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
             arg = list(map(float, sys.argv[2].strip("[]").split(",")))
             
             # convert the list into a vectortoolkit vector
-            vector = vectortools.Vector3D(arg[0], arg[1], arg[2])
+            vector = vector_tools.Vector3D(arg[0], arg[1], arg[2])
             
             result = function_lookup[selected_function]["func"](vector)
             
@@ -66,8 +66,8 @@ if __name__ == "__main__":
             arg_2 = list(map(float, sys.argv[3].strip("[]").split(",")))
             
             # convert them into vectortoolkit vectors
-            vec_a = vectortools.Vector3D(arg_1[0], arg_1[1], arg_1[2])
-            vec_b = vectortools.Vector3D(arg_2[0], arg_2[1], arg_2[2])
+            vec_a = vector_tools.Vector3D(arg_1[0], arg_1[1], arg_1[2])
+            vec_b = vector_tools.Vector3D(arg_2[0], arg_2[1], arg_2[2])
             
             result = function_lookup[selected_function]["func"](vec_a, vec_b)
             

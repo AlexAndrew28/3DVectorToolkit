@@ -1,4 +1,4 @@
-from vectortoolkit import vector, vectortools
+from vectortoolkit import vector, vector_tools
 
 """
 Task 1 - ensure that the cross product of two vectors is perpendicular to both vectors
@@ -8,11 +8,11 @@ vec_a = vector.Vector3D(17, 9, -7)
 vec_b = vector.Vector3D(18, 24, -24)
 
 # cross product
-vec_a_cross_b = vectortools.VectorTools.cross_product(vec_a, vec_b)
+vec_a_cross_b = vector_tools.VectorTools.cross_product(vec_a, vec_b)
 
 # calculate the angles between A cross B and A and B
-angle_cross_a = vectortools.VectorTools.calculate_angle(vec_a_cross_b, vec_a)
-angle_cross_b = vectortools.VectorTools.calculate_angle(vec_a_cross_b, vec_b)
+angle_cross_a = vector_tools.VectorTools.calculate_angle(vec_a_cross_b, vec_a)
+angle_cross_b = vector_tools.VectorTools.calculate_angle(vec_a_cross_b, vec_b)
 
 # check the angle is equal to pi/2 radians
 if round(angle_cross_a, 5) == 1.57080 and round(angle_cross_b, 5) == 1.57080:
@@ -35,10 +35,10 @@ point_of_interest = (15, 9, -6)
 new_vec_travel = vector.Vector3D(point_of_interest[0]-current_location[0], point_of_interest[1]-current_location[1], point_of_interest[2]-current_location[2])
 
 # get the angle of the change
-heading_change = vectortools.VectorTools.calculate_angle(current_vec_travel, new_vec_travel)
+heading_change = vector_tools.VectorTools.calculate_angle(current_vec_travel, new_vec_travel)
 
 # get the distance to the new point
-distance_to_point = vectortools.VectorTools.calculate_distance(current_location, point_of_interest)
+distance_to_point = vector_tools.VectorTools.calculate_distance(current_location, point_of_interest)
 
 print("Change in heading (radians): ", round(heading_change, 5))
 print("Distance to point of interest: ", round(distance_to_point, 5))
@@ -62,9 +62,9 @@ vec_a_list = list(map(float, vec_a_input.strip("[]").split(",")))
 vec_b_list = list(map(float, vec_b_input.strip("[]").split(",")))
 
 # convert the lists of floats into vectors
-vec_a = vectortools.Vector3D(vec_a_list[0], vec_a_list[1], vec_a_list[2])
-vec_b = vectortools.Vector3D(vec_b_list[0], vec_b_list[1], vec_b_list[2])
+vec_a = vector_tools.Vector3D(vec_a_list[0], vec_a_list[1], vec_a_list[2])
+vec_b = vector_tools.Vector3D(vec_b_list[0], vec_b_list[1], vec_b_list[2])
 
-projection = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
+projection = vector_tools.VectorTools.calulate_vector_projection(vec_a, vec_b)
 
 print(projection)

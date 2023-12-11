@@ -8,19 +8,19 @@ In this environment I gained the following results:
 
 Calculate angle between two vectors	
 vectormath:	    5.011 seconds
-vectortools:	0.408 seconds
+vector_tools:	0.408 seconds
 
 Calculate cross product of two vectors	
 vectormath:	    8.577 seconds
-vectortools:	0.267 seconds
+vector_tools:	0.267 seconds
 
 Calculate dot product of two two vectors	
 vectormath:	    2.123 seconds
-vectortools:	0.166 seconds
+vector_tools:	0.166 seconds
 
 Find the unit vector	
 vectormath:	    3.884 seconds
-vectortools:	0.05 seconds
+vector_tools:	0.05 seconds
 
 Each test was run 100000 times
 
@@ -65,7 +65,7 @@ def vectortoolkit_library_test_angle():
     vec_a = vector.Vector3D(5, 10, 4)
     vec_b = vector.Vector3D(16, -2, 100)
 
-    angle = vectortools.VectorTools.calculate_angle(vec_a, vec_b)
+    angle = vector_tools.VectorTools.calculate_angle(vec_a, vec_b)
     
 def vectortoolkit_library_test_cross():
     """Find the cross product of two vectors using my library vectortoolkit
@@ -73,7 +73,7 @@ def vectortoolkit_library_test_cross():
     vec_a = vector.Vector3D(5, 10, 4)
     vec_b = vector.Vector3D(16, -2, 100)
     
-    cross = vectortools.VectorTools.cross_product(vec_a, vec_b)
+    cross = vector_tools.VectorTools.cross_product(vec_a, vec_b)
     
 def vectortoolkit_library_test_dot():
     """Find the dot product of two vectors using my library vectortoolkit
@@ -81,7 +81,7 @@ def vectortoolkit_library_test_dot():
     vec_a = vector.Vector3D(5, 10, 4)
     vec_b = vector.Vector3D(16, -2, 100)
     
-    dot = vectortools.VectorTools.dot_product(vec_a, vec_b)
+    dot = vector_tools.VectorTools.dot_product(vec_a, vec_b)
     
     
 def vectortoolkit_library_test_unit():
@@ -93,7 +93,7 @@ def vectortoolkit_library_test_unit():
 
 
 if __name__ == '__main__':
-    from vectortoolkit import vector, vectortools
+    from vectortoolkit import vector, vector_tools
     import timeit
     import vectormath
     
@@ -101,32 +101,32 @@ if __name__ == '__main__':
     
     # find angle between vectors
     vectormath_angle_time = timeit.timeit("vectormath_library_test_angle()", setup="from __main__ import vectormath_library_test_angle", number=timeit_number)
-    vectortools_angle_time = timeit.timeit("vectortoolkit_library_test_angle()", setup="from __main__ import vectortoolkit_library_test_angle", number=timeit_number)
+    vector_tools_angle_time = timeit.timeit("vectortoolkit_library_test_angle()", setup="from __main__ import vectortoolkit_library_test_angle", number=timeit_number)
     
     # find cross product
     vectormath_cross_time = timeit.timeit("vectormath_library_test_cross()", setup="from __main__ import vectormath_library_test_cross", number=timeit_number)
-    vectortools_cross_time = timeit.timeit("vectortoolkit_library_test_cross()", setup="from __main__ import vectortoolkit_library_test_cross", number=timeit_number)
+    vector_tools_cross_time = timeit.timeit("vectortoolkit_library_test_cross()", setup="from __main__ import vectortoolkit_library_test_cross", number=timeit_number)
 
     # find dot product
     vectormath_dot_time = timeit.timeit("vectormath_library_test_dot()", setup="from __main__ import vectormath_library_test_dot", number=timeit_number)
-    vectortools_dot_time = timeit.timeit("vectortoolkit_library_test_dot()", setup="from __main__ import vectortoolkit_library_test_dot", number=timeit_number)
+    vector_tools_dot_time = timeit.timeit("vectortoolkit_library_test_dot()", setup="from __main__ import vectortoolkit_library_test_dot", number=timeit_number)
  
     # find unit vector 
     vectormath_unit_time = timeit.timeit("vectormath_library_test_unit()", setup="from __main__ import vectormath_library_test_unit", number=timeit_number)
-    vectortools_unit_time = timeit.timeit("vectortoolkit_library_test_unit()", setup="from __main__ import vectortoolkit_library_test_unit", number=timeit_number)
+    vector_tools_unit_time = timeit.timeit("vectortoolkit_library_test_unit()", setup="from __main__ import vectortoolkit_library_test_unit", number=timeit_number)
     
     print("angle between two vectors")
     print("vectormath: ", round(vectormath_angle_time,3))
-    print("vectortools: ", round(vectortools_angle_time,3))
+    print("vector_tools: ", round(vector_tools_angle_time,3))
     
     print("cross product of two vectors")
     print("vectormath: ", round(vectormath_cross_time,3))
-    print("vectortools: ", round(vectortools_cross_time,3))
+    print("vector_tools: ", round(vector_tools_cross_time,3))
     
     print("dot product of two two vectors")
     print("vectormath: ", round(vectormath_dot_time,3))
-    print("vectortools: ", round(vectortools_dot_time,3))
+    print("vector_tools: ", round(vector_tools_dot_time,3))
     
     print("finding the unit vector")
     print("vectormath: ", round(vectormath_unit_time,3))
-    print("vectortools: ", round(vectortools_unit_time,3))
+    print("vector_tools: ", round(vector_tools_unit_time,3))

@@ -40,7 +40,7 @@
 <p>3D vector toolkit developed as a technical challenge for Lambda Automata.</p>
 <section id="installation">
 <h3>Installation:<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h3>
-<p>1. Download the wheel file found at:</p>
+<p>1. Download the wheel file from the latest release or from the code at the following location</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span><span class="o">/</span><span class="n">vectortoolkit</span><span class="o">-</span><span class="mf">1.0.0</span><span class="o">-</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="nb">any</span><span class="o">.</span><span class="n">whl</span>
 </pre></div>
 </div>
@@ -71,38 +71,48 @@
 </pre></div>
 </div>
 <p>You can calculate both dot and cross products using the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vectortools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector_tools</span>
 
 <span class="n">vec_a</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 <span class="n">vec_b</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 
-<span class="n">dot_prod</span> <span class="o">=</span> <span class="n">vectortools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">dot_prod</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">dot_product</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
 
-<span class="n">cross_prod</span> <span class="o">=</span> <span class="n">vectortools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">cross_product</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">cross_prod</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">cross_product</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To calculate the angle between two vectors:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vectortools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector_tools</span>
 
 <span class="n">vec_a</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 <span class="n">vec_b</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 
-<span class="n">angle</span> <span class="o">=</span> <span class="n">vectortools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calculate_angle</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calculate_angle</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To calculate the distance between two points:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vectortools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector_tools</span>
 
-<span class="n">distance</span> <span class="o">=</span> <span class="n">vectortools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calculate_distance</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calculate_distance</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">],</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>To calculate the projection of one vector onto another:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vectortools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vectortoolkit</span> <span class="kn">import</span> <span class="n">vector</span><span class="p">,</span> <span class="n">vector_tools</span>
 
 <span class="n">vec_a</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 <span class="n">vec_b</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 
-<span class="n">angle</span> <span class="o">=</span> <span class="n">vectortools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calulate_vector_projection</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">calulate_vector_projection</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can also add, subtract, multiply and divide vectors element-wise:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vec_a</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">vec_b</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">Vector3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="n">vec_c</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">add_vectors</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">vec_d</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">subtract_vectors</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">vec_e</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">multiply_vectors</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
+<span class="n">vec_f</span> <span class="o">=</span> <span class="n">vector_tools</span><span class="o">.</span><span class="n">VectorTools</span><span class="o">.</span><span class="n">divide_vectors</span><span class="p">(</span><span class="n">vec_a</span><span class="p">,</span> <span class="n">vec_b</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
