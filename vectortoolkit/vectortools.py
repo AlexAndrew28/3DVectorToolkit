@@ -79,6 +79,24 @@ class VectorTools:
         k_part = vec_a.get_k() * vec_b.get_k()
         return i_part + j_part + k_part
     
+    def cross_product(vec_a: Vector3D, vec_b: Vector3D) -> Vector3D:
+        """Calculates th cross product of two given vectors and returns the result
+
+        Args:
+            vec_a (Vector3D): A 3D vector
+            vec_b (Vector3D): A 3D vector
+
+        Returns:
+            Vector3D: The cross product of the two input vectors 
+        """
+        
+        i = (vec_a.get_j() * vec_b.get_k()) - (vec_a.get_k() * vec_b.get_j())
+        j = (vec_a.get_k() * vec_b.get_i()) - (vec_a.get_i() * vec_b.get_k())
+        k = (vec_a.get_i() * vec_b.get_j()) - (vec_a.get_j() * vec_b.get_i())
+        
+        return Vector3D(i, j, k)
+        
+        
     def calculate_distance(point_a: [float, float, float], point_b: [float, float, float]) -> float:
         """Calculates the distance between two points in 3D space
 

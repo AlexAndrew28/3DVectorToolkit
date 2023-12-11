@@ -123,3 +123,26 @@ def test_distance():
     assert vectortools.VectorTools.calculate_distance([0, 0, 0], [0, 0, 0]) == 0
     assert vectortools.VectorTools.calculate_distance([0, 1043, -2], [0, 1043, -2]) == 0
     assert vectortools.VectorTools.calculate_distance([421.2, 0, 4], [421.2, 0, 4]) == 0
+    
+    
+def test_cross_product():
+    """Tests the cross product function that calcualtes the cross product of two vectors
+    """
+    
+    vec_a = vector.Vector3D(5, 2, 16)
+    vec_b = vector.Vector3D(2, 5, -4)
+    
+    vec_a_cross_b = vectortools.VectorTools.cross_product(vec_a, vec_b)
+    
+    assert vec_a_cross_b.get_i() == -88
+    assert vec_a_cross_b.get_j() == 52
+    assert vec_a_cross_b.get_k() == 21
+    
+    vec_c = vector.Vector3D(32, 19, -64)
+    vec_d = vector.Vector3D(-3, 13, 92)
+    
+    vec_c_cross_d = vectortools.VectorTools.cross_product(vec_c, vec_d)
+    
+    assert vec_c_cross_d.get_i() == 2580
+    assert vec_c_cross_d.get_j() == -2752
+    assert vec_c_cross_d.get_k() == 473
