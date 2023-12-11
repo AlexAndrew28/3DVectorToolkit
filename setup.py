@@ -12,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
-    version="1.0.0",
+    version="1.0.1",
     description="3D vector toolkit for Lambda Automata",
     author="Alex A",
     install_requires=["typing-extensions"]

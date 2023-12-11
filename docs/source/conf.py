@@ -4,7 +4,7 @@ import sys
 project = '3D Vector Toolkit'
 copyright = '2023, Alex A'
 author = 'Alex A'
-release = '1.0.0'
+release = '1.0.1'
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.coverage', 'sphinx.ext.napoleon']
 
