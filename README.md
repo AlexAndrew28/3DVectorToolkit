@@ -147,3 +147,12 @@ From these tests I gained the following results:
 
 Each test was run 100000 times.
 
+#### Testing
+
+To ensure that the code functions properly I wrote a number of tests that can be found in:
+
+```
+tests/
+```
+
+These tests cover every function in the library to ensure correct functionality.
