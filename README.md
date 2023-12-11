@@ -1,5 +1,5 @@
 ## 3D Vector Toolkit
-# By Alex Andrew
+### By Alex Andrew
 
 3D vector toolkit developed as a technical challenge for Lambda Automata.
 
@@ -7,7 +7,7 @@
 1. Download the wheel file: 
 2. Use pip to install the library and its requirements:
 ```
-pip install /file/location/of/wheel.whl
+pip install wheel.whl
 ```
 3. You are done, everything should be ready to go
 
@@ -74,19 +74,33 @@ angle = vectortools.VectorTools.calulate_vector_projection(vec_a, vec_b)
 #### Command line:
 
 Usage:
-    vectortoolkit <command> [arguments]
-
+```
+vectortoolkit <command> [arguments]
+```
+    
 Commands:
     -d          Calculate dot product of two vectors
+
     -c          Calculate cross product of two vectors
+
     -di         Calculate distance between two points
+
     -a          Caclulate the angle between two vectors
+
     -p          Calculate the projection of one vector onto another
+
     -n          Calculate the unit vector of a given vector 
+
     -help       Show help for commands
 
+
 Example usages:
+The first command will calculate the dot product of the two vectors.
+
+The second command will calculate the angle between the two vectors in radians.
+```
     python -m vectortoolkit -d [1, 5, 7] [8, -24, 2]
     python -m vectortoolkit -a [0.6, 532, -7] [7, 4, -43]
+```
 
 
